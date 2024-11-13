@@ -15,7 +15,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone or Download the Project
 
   ```bash
-  git clone https://github.com/your-username/Customer-Records.git
+  git clone https://github.com/Sambarr3/Customer-Records.git
   ```
 
 ### 2. Open the Project in Eclipse
