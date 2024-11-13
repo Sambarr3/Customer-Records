@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Error</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	color: #333;
+	margin: 0;
+	background-color: #fafafa;
+}
+
+.error-message {
+	font-size: 18px;
+	color: red;
+}
+</style>
+</head>
+<body>
+
+	<h1>Registration Failed</h1>
+	<p class="error-message" id="error-message">There was an issue with
+		your registration.</p>
+	<p>
+		<a href="/Customer_Records/SignUpPage.html">Back to registration</a>
+	</p>
+
+	<script>
+		// Get the 'error' parameter from the URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const errorType = urlParams.get('error');
+
+		// Update error message based on error type
+		const errorMessageElement = document.getElementById('error-message');
+		if (errorType === 'password_mismatch') {
+			errorMessageElement.textContent = "Passwords do not match. Please try again.";
+		} else if (errorType === 'duplicate_entry') {
+			errorMessageElement.textContent = "Account already exists with these details. Please use different information.";
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn - Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      
+       #error-message {
+        color: red;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 15px;
+        text-align: center;
+        display: inline-block;
+        max-width: 300px;
+    	}
+      
+      .hero {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .form-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"] {
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.75rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #555;
+      }
+      p{
+      	align-content: center;
+      	text-align: center;
+      }
+      
+      footer {
+        margin-top: 2rem;
+        text-align: center;
+        padding: 1rem;
+        color: #777;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="error-message" style="color:red;"></div>
+    <section class="hero">
+      <h1>Welcome to Our Community</h1>
+      <p>Sign in to get the latest updates and to move forword.</p>
+    </section>
+
+    <div class="form-container">
+      <form action="login" method="post">
+        <input type="text" name="username" placeholder="Email Address" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+        <p>You Don't have account, <a href="/Customer_Records/SignUpPage.html">SignUp</a>.</p>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Website. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('error');
+        if (errorMessage) {
+            document.getElementById('error-message').textContent = errorMessage;
+        }
+    </script>
+  </body>
+</html>

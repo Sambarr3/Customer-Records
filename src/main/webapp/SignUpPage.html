@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp - Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      .hero {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .form-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"] {
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.75rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #555;
+      }
+      
+      p{
+      	align-content: center;
+      	text-align: center;
+      }
+      
+      footer {
+        margin-top: 2rem;
+        text-align: center;
+        padding: 1rem;
+        color: #777;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Welcome to Our Community</h1>
+      <p>Sign up to get the latest updates and exclusive content.</p>
+    </section>
+
+    <div class="form-container">
+      <form action="register" method="post">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="confirm-password"
+          placeholder="Confirm Password"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+        <p>Already have account, <a href="/Customer_Records/login.html">SignIn</a>.</p>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

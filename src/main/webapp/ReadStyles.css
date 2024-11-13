@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+.record-table {
+	width: 60%;
+	margin: 20px auto;
+	border-collapse: collapse;
+}
+
+.record-table th, .record-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.record-table th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.record-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.record-table tr:hover {
+	background-color: #ddd;
+}
